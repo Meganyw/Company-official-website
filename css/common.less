@@ -1,0 +1,174 @@
+/*开始*/
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background: #fff;
+  font: normal 12px/22px "Microsoft Yahei";
+}
+img {
+  border: 0;
+  display:block;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  &:hover {
+    color: #1974a1;
+  }
+}
+.clearfix:after,.clearfix:before {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix {
+  &:after {
+    clear: both;
+  }
+}
+.w1200{width:1200px;}
+.wrapper{padding-bottom: 120px;}
+body{position:relative;}
+/* 头部 */
+.four-level-menu {
+  background: transparent;
+  float: left;
+  z-index:999;
+  margin-left: 120px;
+}
+
+.first-menu {
+  z-index: 9999999;
+  & > li {
+    float: left;
+    overflow:hidden;
+  }
+}
+.first-link {
+  display: block;
+  color: #fff;
+  font-weight: normal;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  padding: 16px;
+  position: relative;
+  margin: 0 10px;
+  &:hover {
+    box-sizing: border-box;
+    color: #459df5;
+  }
+  &.active {
+    border-bottom: 2px solid #fff;
+    box-sizing: border-box;
+    color: #459df5;
+    font-weight: bold;
+  }
+}
+/*二级菜单*/
+.second-menu {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  background: url(images/dropdown_bg.png) repeat;
+  padding: 15px;
+  opacity: 1;
+  display: none;
+  box-sizing: border-box;
+  height:445px;
+  z-index: 999999;
+  & > li {
+    float: left;
+    width: 170px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-right: 1px solid #4A4B4E;
+    height: 100%;
+  }
+}
+.second-link {
+  color: #fff;
+  font-size: 16px;
+  padding: 7px 15px;
+  display: block;
+  margin-bottom: 10px;
+  cursor:pointer;
+  &:hover {
+    color: #6aa3ea;
+  }
+}
+.third-menu {
+  & > li {
+    position: relative;
+  }
+}
+.third-link {
+  padding: 5px 15px;
+  display: block;
+  color: #fff;
+  cursor:pointer;
+  &:hover {
+    color: #6aa3ea;
+  }
+  &.hover {
+    background: #f3f3f3;
+    color: #459df5;
+    border-radius: 4px;
+  }
+}
+.tab{
+  .logo{
+    line-height:50px;
+    overflow: hidden;
+    float: left;
+    margin-left: 50px;
+    margin-top: 3px;
+    .logo-img{
+      height:52px;
+      width:46px;
+      background:url('images/logo.png') no-repeat;
+      background-size:100% 100%;
+      float: left;
+    }
+    .logo-name{
+      float: left;
+      color: #fff;
+      font-weight: bold;
+      background: url(images/logo-name.png) no-repeat;
+      width: 103px;
+      height: 29px;
+      margin-top: 12px;
+      text-indent: -99999px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.page-bottom{
+  text-align:center;
+  line-height:40px;
+  background:#313131;
+  color:#939393;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  p{
+    >span{
+      border-right:1px solid #939393;
+      padding-right: 10px;
+      margin-right:10px;
+    }
+    >span:last-child{
+      border-right:none;
+    }
+    >span:first-child{
+      color: #fff;
+    }
+  }
+}
